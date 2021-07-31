@@ -50,6 +50,23 @@ public class UserRegistrationMethods {
         };
         lName.Validator();
     }
+    public void mobileValidate()
+    {
+        DataValidate Mobile =() -> {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter your Mobile number");
+            String mobile = sc.nextLine();
+
+            Pattern pattern = Pattern.compile("^[0-9]{0,2}[ ][0-9]{10}");
+            Matcher matcher = pattern.matcher(mobile);
+            if (matcher.matches()) {
+            } else {
+                System.out.println("Given mobile number. is not valid");
+            }
+        };
+        Mobile.Validator();
+    }
      
 }
 

@@ -26,7 +26,16 @@ public class UserRegistration {
 	 */
         public boolean validateLastName(String lName) throws UserRegistrationException{
         return patternChecker(lName, NAME_PATTERN);
-    }
+       }
+       /**
+	 * This method is used to validate email id.
+	 * @param emailId takes emailId as input.
+	 * @return boolean value to check whether emailId is true or false.
+	 */
+          public boolean validateEmailId(String emailId) throws UserRegistrationException{
+		return patternChecker(emailId, EMAIL_PATTERN);
+       }
+    
     }
 	/**
 	 * This method patternChecker is to validate regex with each respective field.
