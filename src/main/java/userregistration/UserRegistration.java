@@ -18,6 +18,15 @@ public class UserRegistration {
 	 */
 	public boolean validateFirstName(String fname) throws UserRegistrationException{
         return patternChecker(fname, NAME_PATTERN);
+        
+        /**
+	 * This method is used to validate last name.
+	 * @param lname takes lastname as input.
+	 * @return boolean value to check whether fname is true or false.
+	 */
+        public boolean validateLastName(String lName) throws UserRegistrationException{
+        return patternChecker(lName, NAME_PATTERN);
+    }
     }
 	/**
 	 * This method patternChecker is to validate regex with each respective field.
