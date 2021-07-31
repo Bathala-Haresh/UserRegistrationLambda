@@ -9,8 +9,7 @@ interface DataValidate {
 }
 public class UserRegistrationMethods {
 
-    public void firstNameValidate() 
-   {
+    public void firstNameValidate() {
         DataValidate fName = () ->
         {
             Scanner sc = new Scanner(System.in);
@@ -84,7 +83,23 @@ public class UserRegistrationMethods {
         };
         Mobile.Validator();
     }
-     
+    public void passwordValidate()
+    {
+        DataValidate Password = () -> {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter your Password");
+            String password = sc.next();
+
+            Pattern pattern = Pattern.compile("^(?=.{8,20})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$");
+            Matcher matcher = pattern.matcher(password);
+            if (matcher.matches()) {
+            } else {
+                System.out.println("Given password is not valid");
+            }
+        };
+        Password.Validator();
+    }
 }
 
 

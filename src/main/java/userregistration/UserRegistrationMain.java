@@ -17,6 +17,6 @@ public class UserRegistrationMain {
         obj.lastNameValidate();
         obj.emailValidate();
         obj.mobileValidate();
-    
+        obj.passwordValidate();
     }
 }
