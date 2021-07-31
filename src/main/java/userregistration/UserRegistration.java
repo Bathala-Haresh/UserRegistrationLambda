@@ -35,6 +35,15 @@ public class UserRegistration {
           public boolean validateEmailId(String emailId) throws UserRegistrationException{
 		return patternChecker(emailId, EMAIL_PATTERN);
        }
+        /**
+	 * This method is used to validate mobile number.
+	 * @param mobilenum takes mobilenum as input.
+	 * @return boolean value to check whether mobilenum is true or false.
+	 */
+          public boolean validateMobileNum(String mobileNum) throws UserRegistrationException{
+           return patternChecker(mobileNum, MOBILE_PATTERN);
+	
+	}
     
     }
 	/**
@@ -42,7 +51,7 @@ public class UserRegistration {
 	 * @param input takes input field and checks with field pattern.
 	 * @return boolean value to check patternChecker.
 	 */
-    private boolean patternChecker(String input,String fieldPattern) throws UserRegistrationException{
+        private boolean patternChecker(String input,String fieldPattern) throws UserRegistrationException{
         Pattern pattern = Pattern.compile(fieldPattern);
         Matcher matcher = pattern.matcher(input);
         try {

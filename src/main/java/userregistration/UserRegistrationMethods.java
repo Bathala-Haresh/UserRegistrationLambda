@@ -50,6 +50,23 @@ public class UserRegistrationMethods {
         };
         lName.Validator();
     }
+    public void emailValidate()
+    {
+        DataValidate eMail = () -> {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter your Email id");
+            String email = sc.next();
+
+            Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+            Matcher matcher = pattern.matcher(email);
+            if(matcher.matches()){
+            }else{
+                System.out.println("Given email id is not valid");
+            }
+        };
+        eMail.Validator();
+    }
     public void mobileValidate()
     {
         DataValidate Mobile =() -> {
